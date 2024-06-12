@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const dbConnection = async() => {
     try {
         mongoose.connect('mongodb+srv://admin:admin@cluster0.xgofadg.mongodb.net/hospitalDB');
-        console.log('DB Online');
+        console.log('BD Online');
 
     } catch (error) {
         console.error(Error);
