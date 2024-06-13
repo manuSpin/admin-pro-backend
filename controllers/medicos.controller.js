@@ -7,7 +7,7 @@ const getMedicos = async (request, res = response) => {
     res.json({
         ok: true,
         medicos: medicos,
-        total: usuarios.length
+        total: medicos.length
     });
 
 }
@@ -32,10 +32,13 @@ const createMedico = async (request, res = response) => {
 }
 
 const editMedico = async (request, res = response) => {
-    const uid = request.params.uid;
+    const uid = request.params.id;
 
+    console.log('uid', uid);
+    
     try {
-        const medicoDB = Medico.findById(uid);
+        const medicoDB = await Medico.findById(uid);
+        console.log('medicoDB', medicoDB);
 
         if (!medicoDB) {
             res.status(404).json({
@@ -44,7 +47,9 @@ const editMedico = async (request, res = response) => {
             });
         }
 
-        const updatedMedico = await Medico.findByIdAndUpdate(uid, request.body, { new: true });
+        const cambios = { ...request.body, usuarios: request.uid };
+
+        const updatedMedico = await Medico.findByIdAndUpdate(uid, cambios, { new: true });
 
         res.json({
             ok: true,

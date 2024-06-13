@@ -34,7 +34,7 @@ const editHospital = async (request, res = response) => {
     const uid = request.params.id;
 
     try {
-        const hospitalDB = Hospital.findById(uid);
+        const hospitalDB = await Hospital.findById(uid);
 
         if (!hospitalDB) {
             res.status(404).json({
@@ -43,7 +43,9 @@ const editHospital = async (request, res = response) => {
             });
         }
 
-        const updatedHospital = await Hospital.findByIdAndUpdate(uid, request.body, { new: true });
+        const cambios = { ...request.body, usuarios: request.uid };
+
+        const updatedHospital = await Hospital.findByIdAndUpdate(uid, cambios, { new: true });
 
         res.json({
             ok: true,

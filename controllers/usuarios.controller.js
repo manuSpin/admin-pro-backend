@@ -8,7 +8,6 @@ const getUsuarios = async (request, res = response) => {
     const from = Number(request.query.from) || 0;
     const size = Number(request.query.size) || 5;
 
-
     const [usuarios, total] = await Promise.all([
         Usuario.find({}, 'id nombre apellido email role google').skip(from).limit(size),
         Usuario.countDocuments()
