@@ -7,6 +7,70 @@
 	},
 	"item": [
 		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"manuel.fernandez@mail.com\",\r\n    \"password\": \"pass@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Google",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6ImMzYWJlNDEzYjIyNjhhZTk3NjQ1OGM4MmMxNTE3OTU0N2U5NzUyN2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI0NTU0MzQ0MTcyMTMtcjNwNnV0ZG9jOWQybnY4Yjc2ZzdhNjY0bDliMTFxbjEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI0NTU0MzQ0MTcyMTMtcjNwNnV0ZG9jOWQybnY4Yjc2ZzdhNjY0bDliMTFxbjEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDE3MTg3MTM5MzMxOTg0ODExNjEiLCJlbWFpbCI6Im1hbnVlbC5mZXJjYS45MUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmJmIjoxNzE4MjczMDEyLCJuYW1lIjoiTWFudWVsIElnbmFjaW8gRmVybsOhbmRleiBDYXJtb25hIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0wzZ1FYR2NRSEkxM1NOdHR0VTBDSDlndVAzTzdYMFRHZW8zaWgzWnpCMG51R2tlZk1fPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ik1hbnVlbCBJZ25hY2lvIiwiZmFtaWx5X25hbWUiOiJGZXJuw6FuZGV6IENhcm1vbmEiLCJpYXQiOjE3MTgyNzMzMTIsImV4cCI6MTcxODI3NjkxMiwianRpIjoiYTI5ZGEzNzBkZGQxNDdmYTg2NTYwMmNlODY2OGJmZWQ1N2ViNmY5NCJ9.Hs39_jwxDy-_oW0UEfaBs1AezFnWM7NRFk6W_stZKKd_lBcnN48S9JeH6RcmzNzNIHQptX569XGs-aL5HlQZVgtRf13xRWOxBTLJFrwIiddxmodP4edBQNDW0CSqik69Tb588xoLREyVJMjzQde1Fqo9lFCxOdu5SI0DRWsTG2_7AJmyW1PkqzMT1Zgr5p9MOJEElrbeQv00G2h2qpZ_S5QsEpc9zbKm1h5TUakF_FOQTTAZIBe8TQJY7cLzZRw0ZZyjpzZ7FsxC2qYUijbqFj1YT-lgxKDG40O_yakTKUmJ-OX9GjuSKfYV64Zuy6pT9OpNVAGztcK-Zuxd__YeEg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login/google",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login",
+								"google"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Usuarios",
 			"item": [
 				{
@@ -623,35 +687,6 @@
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"manuel.fernandez@mail.com\",\r\n    \"password\": \"pass@123\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"login"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }
