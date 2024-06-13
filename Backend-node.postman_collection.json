@@ -67,6 +67,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Renew Token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNjI5MTYsImV4cCI6MTcxODI5MTcxNn0.0tKghzFwH5RR7QQh28tMXaLlfWeYCyZ9BFV0eU8kqB0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/login/renew",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login",
+								"renew"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -245,7 +272,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNzY5NDgsImV4cCI6MTcxODMwNTc0OH0.JDY_uC9L9SW_rOrgE_uVIi78ZKaiMcWGfhNj2OowFTI"
 							}
 						],
 						"url": {
@@ -305,12 +332,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNzY5NDgsImV4cCI6MTcxODMwNTc0OH0.JDY_uC9L9SW_rOrgE_uVIi78ZKaiMcWGfhNj2OowFTI"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n            \"nombre\": \"Hospital Unilateralmente Lateral\",\r\n            \"img\": \"\",\r\n            \"creator\": \"666811b016e605d3695b9636\"\r\n        }",
+							"raw": "{\r\n            \"nombre\": \"Hospital Unilateralmente Lateral\",\r\n            \"creator\": \"666811b016e605d3695b9636\"\r\n        }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -404,7 +431,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNzg5ODAsImV4cCI6MTcxODMwNzc4MH0.o3D0enS-wf4MZ94-JhQyNmuB6cpgDg0XfO4S0Y4MU5U"
 							}
 						],
 						"url": {
@@ -464,12 +491,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNzg5ODAsImV4cCI6MTcxODMwNzc4MH0.o3D0enS-wf4MZ94-JhQyNmuB6cpgDg0XfO4S0Y4MU5U"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n            \"nombre\": \"Paula\",\r\n            \"apellidos\": \"Rodríguez\",\r\n            \"img\": \"\",\r\n            \"creator\": \"666811b016e605d3695b9636\",\r\n            \"hospital\": \"66695496ac19f71294bedb7f\"\r\n        }",
+							"raw": "{\r\n            \"nombre\": \"Paula\",\r\n            \"apellidos\": \"Rodríguez\",\r\n            \"hospital\": \"66695496ac19f71294bedb7f\"\r\n        }",
 							"options": {
 								"raw": {
 									"language": "json"
