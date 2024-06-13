@@ -5,12 +5,19 @@ const { generateTokenJWT } = require('../helpers/jwt');
 
 
 const getUsuarios = async (request, res = response) => {
-    const usuarios = await Usuario.find({}, 'id nombre apellido email role google');
+    const from = Number(request.query.from) || 0;
+    const size = Number(request.query.size) || 5;
+
+
+    const [usuarios, total] = await Promise.all([
+        Usuario.find({}, 'id nombre apellido email role google').skip(from).limit(size),
+        Usuario.countDocuments()
+    ]);
 
     res.json({
         ok: true,
         usuarios: usuarios,
-        uid: request.uid
+        total: total
     });
 }
 
@@ -124,7 +131,6 @@ const deleteUser = async (request, res = response) => {
             error: 'Error: ' + error
         });
     }
-
 }
 
 module.exports = { getUsuarios, crearUsuario, editUsuario, deleteUser }

@@ -19,9 +19,9 @@ router.post('/create', [
 
 router.put('/edit/:id', [
     validateJWT,
-    check('nombre', 'No puede crear un usuario sin un nombre.').not().isEmpty(),
-    check('email', 'Necesita poner un email para crear un usuario.').isEmail(),
-    check('role', 'El rol es necesario.').not().isEmpty(),
+    check('nombre', 'El nombre es obligatorio.').not().isEmpty(),
+    check('email', 'El email es obligatorio.').isEmail(),
+    check('role', 'El rol es obligatorio.').not().isEmpty(),
     validarCampos
 ],editUsuario);
 
