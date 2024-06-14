@@ -135,12 +135,7 @@
 					"name": "createUser",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"nombre\": \"Jacobo\",\r\n    \"apellidos\": \"Delgado\",\r\n    \"email\": \"jacobo.delgado@mail.com\",\r\n    \"password\": \"pass@123\"\r\n}",
@@ -649,7 +644,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNjI5MTYsImV4cCI6MTcxODI5MTcxNn0.0tKghzFwH5RR7QQh28tMXaLlfWeYCyZ9BFV0eU8kqB0"
 							}
 						],
 						"body": {
@@ -658,12 +653,12 @@
 								{
 									"key": "imagen",
 									"type": "file",
-									"src": "/C:/Users/manuel.fcarmona.BABEL-SI/Desktop/Cursos/cursoAngularAvanzado/assets/imagenes/mujer.jpg"
+									"src": "/C:/Users/manuel.fcarmona.BABEL-SI/Desktop/Cursos/cursoAngularAvanzado/assets/imagenes/makoto.png"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/uploads/usuarios/666811e516e605d3695b9640",
+							"raw": "http://localhost:3000/api/uploads/usuarios/666811b016e605d3695b9636",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -673,7 +668,7 @@
 								"api",
 								"uploads",
 								"usuarios",
-								"666811e516e605d3695b9640"
+								"666811b016e605d3695b9636"
 							]
 						}
 					},
