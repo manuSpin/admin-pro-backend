@@ -10,7 +10,6 @@ async function googleVerify(token) {
         //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
     });
     const payload = ticket.getPayload();
-    console.log(payload);
     // If the request specified a Google Workspace domain:
     // const domain = payload['hd'];
 

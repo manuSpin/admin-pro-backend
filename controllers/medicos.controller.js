@@ -33,12 +33,9 @@ const createMedico = async (request, res = response) => {
 
 const editMedico = async (request, res = response) => {
     const uid = request.params.id;
-
-    console.log('uid', uid);
     
     try {
         const medicoDB = await Medico.findById(uid);
-        console.log('medicoDB', medicoDB);
 
         if (!medicoDB) {
             res.status(404).json({

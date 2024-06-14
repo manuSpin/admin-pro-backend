@@ -10,7 +10,6 @@ const router = Router();
 router.get('/', validateJWT,  getUsuarios);
 
 router.post('/create', [
-    validateJWT,
     check('nombre', 'No puede crear un usuario sin un nombre.').not().isEmpty(),
     check('password', 'La contraseña es necesaria para crear un usuario.').not().isEmpty(),
     check('email', 'Necesita poner un email para crear un usuario.').isEmail(),
