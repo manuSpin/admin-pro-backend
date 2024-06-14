@@ -12,7 +12,10 @@ const login = async (request, res = response) => {
 
         // Verificar email y contraseña
         const usuarioDB = await Usuario.findOne({ email });
-        const validPassword = bcrypt.compareSync(password, usuarioDB.password);
+        let validPassword = false;
+        if (usuarioDB) {
+            validPassword = bcrypt.compareSync(password, usuarioDB?.password);
+        }
 
         if (!usuarioDB || !validPassword) {
             return res.status(400).json({
@@ -45,7 +48,7 @@ const loginWithGoogle = async (request, res = response) => {
         let usuario;
 
         if (!usuarioDB) {
-            usuario = new Usuario({ 
+            usuario = new Usuario({
                 nombre: name,
                 email: email,
                 password: '@@@',
