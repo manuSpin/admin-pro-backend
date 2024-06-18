@@ -76,7 +76,7 @@ const showImage = async (request, res = response) => {
     if (fs.existsSync(pathImg)) {
         res.sendFile(pathImg);
         } else {
-        const pathNoImg = path.join(__dirname, '../uploads/no-image.svg');
+        const pathNoImg = path.join(__dirname, '../uploads/no-image.jpg');
         res.sendFile(pathNoImg);
     }
 }

@@ -84,9 +84,12 @@ const loginWithGoogle = async (request, res = response) => {
 const renewToken = async (request, res = response) => {
     const token = await generateTokenJWT(request.uid);
 
+    const usuario = await Usuario.findById(request.uid);
+
     res.json({
         ok: true,
-        token: token
+        token: token,
+        usuario: usuario
     });
 }
 

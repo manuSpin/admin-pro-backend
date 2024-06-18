@@ -87,14 +87,18 @@ const editUsuario = async (request, res = response) => {
             }
         }
 
-        userFields.email = email;
+        if (!usuarioDB.google) {
+            userFields.email = email;
+        } else if (usuarioDB.email != email) {
+            return res.status(400).json({
+                ok: true,
+                msg: 'No se puede cambiar el correo a un usuario de Google'
+            });
+
+        }
 
         const updatedUser = await Usuario.findByIdAndUpdate(uid, userFields, { new: true });
 
-        res.json({
-            ok: true,
-            usuario: updatedUser
-        });
 
     } catch (error) {
         res.status(500).json({
