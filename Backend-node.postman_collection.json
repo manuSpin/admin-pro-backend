@@ -271,11 +271,11 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNzY5NDgsImV4cCI6MTcxODMwNTc0OH0.JDY_uC9L9SW_rOrgE_uVIi78ZKaiMcWGfhNj2OowFTI"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg4NzAwMjksImV4cCI6MTcxODg5ODgyOX0.HHZNhxXkYsU6iR1CVyPRSPMmaGLNhbVrinZiM2wDAjc"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/hospitales",
+							"raw": "http://localhost:3000/api/hospitales?from=0&size=5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -284,6 +284,16 @@
 							"path": [
 								"api",
 								"hospitales"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
 							]
 						}
 					},
@@ -430,11 +440,11 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNzg5ODAsImV4cCI6MTcxODMwNzc4MH0.o3D0enS-wf4MZ94-JhQyNmuB6cpgDg0XfO4S0Y4MU5U"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg4NzAwMjksImV4cCI6MTcxODg5ODgyOX0.HHZNhxXkYsU6iR1CVyPRSPMmaGLNhbVrinZiM2wDAjc"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/medicos",
+							"raw": "http://localhost:3000/api/medicos?from=0&size=5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -443,6 +453,16 @@
 							"path": [
 								"api",
 								"medicos"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
 							]
 						}
 					},
