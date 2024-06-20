@@ -99,6 +99,10 @@ const editUsuario = async (request, res = response) => {
 
         const updatedUser = await Usuario.findByIdAndUpdate(uid, userFields, { new: true });
 
+        res.json({
+            ok: true,
+            usuario: updatedUser
+        });
 
     } catch (error) {
         res.status(500).json({

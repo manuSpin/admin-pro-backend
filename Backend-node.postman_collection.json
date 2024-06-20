@@ -75,7 +75,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNjI5MTYsImV4cCI6MTcxODI5MTcxNn0.0tKghzFwH5RR7QQh28tMXaLlfWeYCyZ9BFV0eU8kqB0",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg2MDU4MzEsImV4cCI6MTcxODYzNDYzMX0.TIN9Q7AlitKUbSDgRLMK9cDpqCaDCXtOka62f6-MUnE",
 								"type": "text"
 							}
 						],
@@ -107,11 +107,11 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNjI5MTYsImV4cCI6MTcxODI5MTcxNn0.0tKghzFwH5RR7QQh28tMXaLlfWeYCyZ9BFV0eU8kqB0"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg3ODA4NjksImV4cCI6MTcxODgwOTY2OX0.Ewu28N9DAMIKiXV1P_Z8XK03O3KER4sSFhs8OKiJrYk"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/usuarios?from=5?size=10",
+							"raw": "http://localhost:3000/api/usuarios?from=0&size=10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -124,7 +124,11 @@
 							"query": [
 								{
 									"key": "from",
-									"value": "5?size=10"
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
 								}
 							]
 						}
@@ -611,11 +615,11 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg4MDQ4NTMsImV4cCI6MTcxODgzMzY1M30.AbccgcAywawJm-LLZ9gFH0wEBD6dBCXsgIOE9kK-7cs"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/todo/collection/medicos/Ma",
+							"raw": "http://localhost:3000/api/todo/collection/medicos/Ma?from=0&size=5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -627,6 +631,16 @@
 								"collection",
 								"medicos",
 								"Ma"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
 							]
 						}
 					},
@@ -644,7 +658,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNjI5MTYsImV4cCI6MTcxODI5MTcxNn0.0tKghzFwH5RR7QQh28tMXaLlfWeYCyZ9BFV0eU8kqB0"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg2OTY2NTksImV4cCI6MTcxODcyNTQ1OX0.mGC1KUZInXpA42zAkggpjYDzPOI6kcB-HhR5CpboQaw"
 							}
 						],
 						"body": {
@@ -658,7 +672,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/uploads/usuarios/666811b016e605d3695b9636",
+							"raw": "http://localhost:3000/api/uploads/usuarios/666811cb16e605d3695b963c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -668,7 +682,7 @@
 								"api",
 								"uploads",
 								"usuarios",
-								"666811b016e605d3695b9636"
+								"666811cb16e605d3695b963c"
 							]
 						}
 					},

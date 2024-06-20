@@ -27,21 +27,27 @@ const getAllByCollection = async (request, res = response) => {
 
     const model = request.params.model;
     const busqueda = request.params.busqueda;
+    const from = Number(request.query.from) || 0;
+    const size = Number(request.query.size) || 5;
     const regex = new RegExp(busqueda, 'i');
 
     let resultados = [];
+    let total = 0;
 
     switch (model) {
         case 'usuarios':
-            resultados = await Usuario.find({ nombre: regex }, 'id nombre apellido email role google');
+            resultados = await Usuario.find({ nombre: regex }, 'id nombre apellido email role google').skip(from).limit(size);
+            total = await Usuario.find({ nombre: regex }, 'id nombre apellido email role google');
             break;
 
         case 'hospitales':
-            resultados = await Hospital.find({ nombre: regex }).populate('creator', 'nombre img');
+            resultados = await Hospital.find({ nombre: regex }).populate('creator', 'nombre img').skip(from).limit(size);
+            total = await Hospital.find({ nombre: regex }).populate('creator', 'nombre img');
             break;
 
         case 'medicos':
-            resultados = await Medico.find({ nombre: regex }).populate('creator', 'nombre img').populate('hospital', 'nombre img');
+            resultados = await Medico.find({ nombre: regex }).populate('creator', 'nombre img').populate('hospital', 'nombre img').skip(from).limit(size);
+            total = await await Medico.find({ nombre: regex }).populate('creator', 'nombre img').populate('hospital', 'nombre img');
             break;
         default:
             return res.status(400).json({
@@ -53,7 +59,7 @@ const getAllByCollection = async (request, res = response) => {
     res.json({
         ok: true,
         resultados: resultados,
-        total: resultados.length
+        total: total.length
     });
 }
 
