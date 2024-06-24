@@ -3,7 +3,7 @@ const Hospital = require('../models/hospital.model');
 
 const getHospitales = async (request, res = response) => {
     const from = Number(request.query.from) || 0;
-    const size = Number(request.query.size) || 5;
+    const size = Number(request.query.size) || Hospital.countDocuments();
 
     const [hospitales, total] = await Promise.all([
         Hospital.find().populate('creator', 'nombre img').skip(from).limit(size),
