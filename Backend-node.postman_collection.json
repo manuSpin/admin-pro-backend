@@ -11,6 +11,20 @@
 			"item": [
 				{
 					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.environment.set('token', response.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -306,12 +320,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg5NTE4NDMsImV4cCI6MTcxODk4MDY0M30.DL5DpOwSN5Xbhcle9EL4JSTKPkIZxWAXLcRQFtSXP4A"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Hospital Unilateral\",\r\n    \"img\": \"\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Hospital Unilateral\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -475,12 +489,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgxNzQ4NzYsImV4cCI6MTcxODIxODA3Nn0.v4OK9z9DlM1QbsQKFkyujC2nJloexhDIMcsa5LnYiNM"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg4NzAwMjksImV4cCI6MTcxODg5ODgyOX0.HHZNhxXkYsU6iR1CVyPRSPMmaGLNhbVrinZiM2wDAjc"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Sigrid\",\r\n    \"apellidos\": \"Casas\",\r\n    \"img\": \"\",\r\n    \"hospital\": \"66695496ac19f71294bedb12\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Enrique\",\r\n    \"apellidos\": \"Tos\",\r\n    \"hospital\": \"66695496ac19f71294bedb7f\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -510,12 +524,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTgyNzg5ODAsImV4cCI6MTcxODMwNzc4MH0.o3D0enS-wf4MZ94-JhQyNmuB6cpgDg0XfO4S0Y4MU5U"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTg4NzAwMjksImV4cCI6MTcxODg5ODgyOX0.HHZNhxXkYsU6iR1CVyPRSPMmaGLNhbVrinZiM2wDAjc"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n            \"nombre\": \"Paula\",\r\n            \"apellidos\": \"Rodríguez\",\r\n            \"hospital\": \"66695496ac19f71294bedb7f\"\r\n        }",
+							"raw": "{\r\n    \"nombre\": \"Paula\",\r\n    \"apellidos\": \"Rodríguez\",\r\n    \"hospital\": \"66695496ac19f71294bedb7f\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -561,6 +575,32 @@
 								"medicos",
 								"delete",
 								"66695a12fe8b165f386f0b61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjY4MTFiMDE2ZTYwNWQzNjk1Yjk2MzYiLCJpYXQiOjE3MTkyMTA1OTgsImV4cCI6MTcxOTIzOTM5OH0.C0SlhPRgXm2pTKfLXhbYI_kO-8s82aY5BCFkRAMR2uo"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/medicos/66695a03d50cc348583ce29f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"medicos",
+								"66695a03d50cc348583ce29f"
 							]
 						}
 					},
@@ -743,6 +783,60 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "headerPrefix",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "x-token",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
