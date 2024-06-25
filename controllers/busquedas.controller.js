@@ -8,7 +8,7 @@ const getAll = async (request, res = response) => {
     const regex = new RegExp(busqueda, 'i');
 
     const [usuarios, hospitales, medicos] = await Promise.all([
-        Usuario.find({ nombre: regex }, 'id nombre apellido email role google'),
+        Usuario.find({ nombre: regex }, 'id nombre apellido email role google img'),
         Hospital.find({ nombre: regex }),
         Medico.find({ nombre: regex }),
     ]);
